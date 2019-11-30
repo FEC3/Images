@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import ImageInSlide from './ImageInSlide.jsx'
 
 const ImagesSlide = (props) => (
