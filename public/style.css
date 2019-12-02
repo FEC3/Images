@@ -8,13 +8,32 @@
 
 .prev-pos{
   position: absolute;
-  left: 200;
+  left: 30px;
   top: 150px;
   color: black;
 }
 
 .next-pos{
   position: absolute;
-  left: 30px;
+  right: 30px;
   top: 150px;
+}
+
+.bullets-container{
+  position: absolute;
+  top: 200px;
+}
+
+.image{
+  width: 80px;
+  height: 80px;
+
+}
+
+.bullet-clickable{
+  background-color: Transparent;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline: 0;
 }

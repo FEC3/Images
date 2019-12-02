@@ -8,15 +8,16 @@ module.exports = {
     filename: 'app.js',
     path: PUB_DIR
   },
-  module : {
-    rules : [
+  module: {
+    rules: [
       {
-        test : /\.jsx?/,
-        loader : 'babel-loader',
+        test: /\.jsx?/,
+        loader: 'babel-loader',
         query: {
           presets: ['@babel/preset-react', '@babel/preset-env']
         }
       }
     ]
   }
+
 };

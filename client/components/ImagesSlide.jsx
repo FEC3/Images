@@ -6,9 +6,9 @@ const ImagesSlide = (props) => (
     <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img className="d-block w-100" src={props.imagesUrl[0]} alt="First slide" />
+          <img className="d-block w-100" src={props.currentImage.url} alt="First slide" />
         </div>
-        {props.imagesUrl.slice(1).map((url, index) => <ImageInSlide url={url} key={index} />)}
+        {props.imagesUrlList.map((image, index) => <ImageInSlide image={image} key={index} />)}
       </div>
     </div>
     <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
