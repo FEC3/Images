@@ -3,10 +3,10 @@ import ImageInSlide from './ImageInSlide.jsx'
 
 const ImagesSlide = (props) => (
   <div className="slide-container">
-    <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControls" className="carousel slide" data-ride="carousel" data-interval="false">
       <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img className="d-block w-100" src={props.currentImage.url} alt="First slide" />
+        <div className="carousel-item active" >
+          <img className="d-block w-100" src={props.currentImage.url} alt="First slide"/>
         </div>
         {props.imagesUrlList.map((image, index) => <ImageInSlide image={image} key={index} />)}
       </div>
