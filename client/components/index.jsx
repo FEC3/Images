@@ -8,32 +8,30 @@ class ImagesApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      allUrls: [{ id: 1, url: "https://source.unsplash.com/1600x900/?corgi" }, { id: 2, url: "https://source.unsplash.com/1600x900/?mountain,sunset" }, { id: 3, url: 'https://source.unsplash.com/1600x900/?airplane' }, { id: 4, url: 'https://source.unsplash.com/1600x900/?guitar' }],
-      currentImage: { id: 1, url: "https://source.unsplash.com/1600x900/?corgi" },
-      imagesUrlList: [{ id: 2, url: "https://source.unsplash.com/1600x900/?mountain,sunset" }, { id: 3, url: 'https://source.unsplash.com/1600x900/?airplane' }, { id: 4, url: 'https://source.unsplash.com/1600x900/?guitar' }]
+      images: [{ id: 0, url: "https://source.unsplash.com/1600x900/?corgi", selected: false }, { id: 1, url: "https://source.unsplash.com/1600x900/?mountain,sunset", selected: false }, { id: 2, url: 'https://source.unsplash.com/1600x900/?airplane', selected: false }, { id: 3, url: 'https://source.unsplash.com/1600x900/?guitar', selected: false }]
     }
-    this.changeImage = this.changeImage.bind(this);
+    this.onImageClick = this.onImageClick.bind(this);
   }
 
-  changeImage(newImage) {
-  var newList =[];
-  var allUrls = this.state.allUrls
-  for (let i=0; i<allUrls.length; i++){
-    if(newImage.id !== allUrls[i].id){
-     newList.push(allUrls[i])
+  onImageClick(image) {
+    const { images } = this.state;
+    for (let i = 0; i < images.length; i++) {
+      if (image === images[i]) {
+        images[i].selected = true;
+      } else {
+        images[i].selected = false;
+      }
     }
-  }
-  this.setState({
-   currentImage: newImage,
-   imagesUrlList: newList
-  })
+    this.setState({
+      images,
+    });
   }
 
   render() {
     return (
       <div>
-        <ImagesSlide currentImage={this.state.currentImage} imagesUrlList={this.state.imagesUrlList} />
-        <Bullets currentImage={this.state.currentImage}  changeImage={this.changeImage} allUrls={this.state.allUrls} />
+        <ImagesSlide images={this.state.images} />
+        <Bullets images={this.state.images} onImageClick={this.onImageClick} />
       </div>
     )
   }

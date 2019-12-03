@@ -25,15 +25,17 @@
 }
 
 .image{
-  width: 80px;
-  height: 80px;
-
+padding: 4px;
 }
 
-.bullet-clickable{
-  background-color: Transparent;
-  border: none;
-  cursor:pointer;
-  overflow: hidden;
-  outline: 0;
+.noBorder {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+.withBorder {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border: solid 2px black;
 }
