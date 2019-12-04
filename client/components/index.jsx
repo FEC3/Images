@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
 import ImagesSlide from './ImagesSlide.jsx'
 import Bullets from './Bullets.jsx'
 
@@ -9,30 +8,29 @@ class ImagesApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      images: [{  url: "https://source.unsplash.com/1600x900/?corgi", selected: false }, {  url: "https://source.unsplash.com/1600x900/?mountain,sunset", selected: false }, { url: 'https://source.unsplash.com/1600x900/?airplane', selected: false }, {  url: 'https://source.unsplash.com/1600x900/?guitar', selected: false },{  url: 'https://source.unsplash.com/1600x900/?guitar', selected: false }]
+      images: null
     }
     this.onImageClick = this.onImageClick.bind(this);
   }
 
   componentDidMount() {
-    this.fetch()
+    this.grabImages()
   }
 
-  fetch() {
+  grabImages() {
     let params = new URLSearchParams(document.location.search.substring(1));
     let productId = params.get('productId')
-    $.ajax({
-      type: 'GET',
-      url: `http://localhost:3002/images/${productId}`
-    })
-      .done((data) => {
-        data[0].selected =true;
+    fetch(`http://localhost:3002/images/${productId}`)
+      .then((data) => {
+        return data.json()
+      })
+      .then((data) => {
+        data[0].selected = true;
         this.setState({
           images: data
-        })
-      })
+        });
+      });
   }
-
   onImageClick(image) {
     const { images } = this.state;
     for (let i = 0; i < images.length; i++) {
@@ -47,14 +45,19 @@ class ImagesApp extends Component {
     });
   }
 
+
   render() {
+    if (!this.state.images) {
+      return <div></div>
+    }
     return (
+
       <div>
         <ImagesSlide images={this.state.images} />
         <Bullets images={this.state.images} onImageClick={this.onImageClick} />
       </div>
     )
-  }
+  };
 }
 
 
