@@ -18,4 +18,15 @@ const productImageSchema = new mongoose.Schema({
 
 const Image = mongoose.model('Image', productImageSchema);
 
+let retrieve = (productId) => {
+  return new Promise((resolve, reject) => {
+    Image.find({ id: productId})
+      .exec((err, doc) => {
+        resolve(doc);
+      });
+
+  });
+};
+
 module.exports = Image;
+module.exports.retrieve = retrieve;
