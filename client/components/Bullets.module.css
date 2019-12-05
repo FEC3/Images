@@ -1,0 +1,20 @@
+.bulletsContainer{
+  position: absolute;
+  top: 200px;
+}
+.withBorder {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border: solid 2px black;
+}
+
+.noBorder {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.image{
+  padding: 4px;
+  }

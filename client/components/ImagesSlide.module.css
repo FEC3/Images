@@ -1,0 +1,23 @@
+.slideContainer {
+  height: auto;
+  width: 60%;
+  position: absolute;
+  left: 100px;
+  top: 200px;
+}
+
+.imagesSlide {
+  margin:auto;
+  width: 579px;
+  height: 579px;
+}
+
+.zoom {
+  cursor: zoom-in;
+}
+
+.leftArrow, .rightArrow {
+  color: black;
+  font-size: 20px;
+  height: 200px;
+}
