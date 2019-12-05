@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import ImagesSlide from './ImagesSlide.jsx'
 import ImagesList from './ImagesList.jsx'
 import Bullets from './Bullets.jsx'
+import axios from 'axios'
 
 
 class ImagesApp extends Component {
@@ -24,17 +25,17 @@ class ImagesApp extends Component {
   grabImages() {
     let params = new URLSearchParams(document.location.search.substring(1));
     let productId = params.get('productId')
-    fetch(`http://localhost:3002/images/${productId}`)
-      .then((data) => {
-        return data.json()
-      })
-      .then((data) => {
-        data[0].selected = true;
+    axios.get(`http://localhost:3002/images/${productId}`)
+      .then((res) => {
+        const images = res.data;
+        images[0].selected = true;
         this.setState({
-          images: data
+          images,
         });
-      });
+      })
+      .catch(err => console.log(err));
   }
+
   onSmallImageClick(image) {
     const { images } = this.state;
     for (let i = 0; i < images.length; i++) {
@@ -54,7 +55,7 @@ class ImagesApp extends Component {
     });
   }
 
-  handleExit(){
+  handleExit() {
     this.setState({
       view: 'main'
     });
