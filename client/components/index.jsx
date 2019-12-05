@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ImagesSlide from './ImagesSlide.jsx'
+import ImagesList from './ImagesList.jsx'
 import Bullets from './Bullets.jsx'
 
 
@@ -8,9 +9,12 @@ class ImagesApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      view: 'main',
       images: null
     }
-    this.onImageClick = this.onImageClick.bind(this);
+    this.onSmallImageClick = this.onSmallImageClick.bind(this);
+    this.onBigImageClick = this.onBigImageClick.bind(this);
+    this.handleExit = this.handleExit.bind(this);
   }
 
   componentDidMount() {
@@ -31,7 +35,7 @@ class ImagesApp extends Component {
         });
       });
   }
-  onImageClick(image) {
+  onSmallImageClick(image) {
     const { images } = this.state;
     for (let i = 0; i < images.length; i++) {
       if (image === images[i]) {
@@ -44,17 +48,34 @@ class ImagesApp extends Component {
       images,
     });
   }
+  onBigImageClick() {
+    this.setState({
+      view: 'zoom'
+    });
+  }
+
+  handleExit(){
+    this.setState({
+      view: 'main'
+    });
+  }
 
 
   render() {
+    let view = this.state.view;
     if (!this.state.images) {
       return <div></div>
     }
     return (
 
       <div>
-        <ImagesSlide images={this.state.images} />
-        <Bullets images={this.state.images} onImageClick={this.onImageClick} />
+        {view === 'main' ?
+          (<div>
+            <ImagesSlide images={this.state.images} onBigImageClick={this.onBigImageClick} />
+            <Bullets images={this.state.images} onSmallImageClick={this.onSmallImageClick} />
+          </div>)
+          : (<ImagesList images={this.state.images} handleExit={this.handleExit} />)}
+
       </div>
     )
   };
