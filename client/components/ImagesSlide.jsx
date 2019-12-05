@@ -4,8 +4,8 @@ import Styles from './ImagesSlide.module.css'
 
 
 const ImagesSlide = (props) => (
-  <div className={`slide-container ${Styles.slideContainer}`}>
-    <div id="carouselExampleControls" className={`carousel ${Styles.slide} `} data-ride="carousel" data-interval="false">
+  <div className={Styles.slideContainer}>
+    <div id="carouselExampleControls" className={`carousel slide ${Styles.imagesSlide} `} data-ride="carousel" data-interval="false">
       <div className="carousel-inner" onClick={() => props.onBigImageClick()}>
         <div className="carousel-item active" >
           <img className={`d-block w-100 ${Styles.zoom} `}  src={props.images[0].url} alt="First slide" />
@@ -21,5 +21,6 @@ const ImagesSlide = (props) => (
     </a>
   </div>
 )
+
 
 export default ImagesSlide;
