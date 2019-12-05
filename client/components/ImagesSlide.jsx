@@ -6,7 +6,7 @@ const ImagesSlide = (props) => (
     <div id="carouselExampleControls" className="carousel slide" data-ride="carousel" data-interval="false">
       <div className="carousel-inner" onClick={() => props.onBigImageClick()}>
         <div className="carousel-item active" >
-          <img className="d-block w-100" src={props.images[0].url} alt="First slide" />
+          <img className="d-block w-100 zoom" src={props.images[0].url} alt="First slide" />
         </div>
         {props.images.slice(1).map((imageUrl, index) => <ImageInSlide imageUrl={imageUrl} key={index} />)}
       </div>

@@ -6,13 +6,12 @@
   top: 200px;
 }
 .slide {
-  /* justify-content: center; */
   margin:auto;
   width: 579px;
   height: 579px;
 }
 
-.d-block {
+.zoom {
   cursor: zoom-in;
 }
 .fa-arrow-right {
