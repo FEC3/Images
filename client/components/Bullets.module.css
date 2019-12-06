@@ -1,17 +1,18 @@
 .bulletsContainer{
   position: absolute;
   top: 200px;
+  margin-left: 10px;
 }
 .withBorder {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
   border: solid 2px black;
 }
 
 .noBorder {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
 }
 

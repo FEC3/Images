@@ -6,10 +6,10 @@ const productId = 100;
 
 let imagesOfOneProduct = [];
 
-let generatingImages = () => {
+let generatingImages = (i) => {
   let allImages = [];
-  for (let x = 0; x <= 4; x++) {
-    var randomimage = Faker.random.image();
+  for (let x = 1; x <= 5; x++) {
+    var randomimage = `https://picsum.photos/id/${i}${x}/900/900`;
     allImages.push({ url: randomimage, selected: false });
   }
   return allImages;
@@ -18,7 +18,7 @@ let generatingImages = () => {
 for (let i = 1; i <= productId; i++) {
   let fakeImage = new Image({
     id: i,
-    images: generatingImages()
+    images: generatingImages(i)
   });
   imagesOfOneProduct.push(fakeImage);
 }
