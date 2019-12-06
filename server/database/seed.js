@@ -1,6 +1,4 @@
 const Image = require('./db');
-const Faker = require('faker');
-
 
 const productId = 100;
 
