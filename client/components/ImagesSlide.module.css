@@ -14,7 +14,6 @@
 
 .zoom {
   cursor: zoom-in;
-
 }
 
 .imageSize {
@@ -22,16 +21,29 @@
   width: 549px;
 }
 
+.arrowPositionL{
+  position: absolute;
+  top: 50%;
+  left: 60px;
+}
+.arrowPositionR{
+  position: absolute;
+  top: 50%;
+  left: 690px;
+}
+
 .leftArrow  {
   color: black;
   font-size: 20px;
   height: 100px;
   margin-right: -30px;
-
+  cursor:pointer
 }
+
 .rightArrow {
   color: black;
   font-size: 20px;
   height: 100px;
   margin-left: -30px;
+  cursor:pointer
 }
