@@ -13,12 +13,16 @@ const ImagesSlide = (props) => (
         {props.images.slice(1).map((imageUrl, index) => <ImageInSlide imageUrl={imageUrl} key={index} />)}
       </div>
     </div>
-    <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <i className={`fas fa-arrow-left ${Styles.leftArrow} `}> </i>
-    </a>
-    <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <i className={`fas fa-arrow-right ${Styles.rightArrow} `} ></i>
-    </a>
+    {/* <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"> */}
+    <div className={Styles.arrowPositionL}>
+      <i className={`fas fa-arrow-left carousel-control-prev ${Styles.leftArrow} `} href="#carouselExampleControls" data-slide="prev">  </i>
+      </div>
+    {/* </a> */}
+    {/* <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"> */}
+    <div className={Styles.arrowPositionR}>
+      <i className={`fas fa-arrow-right carousel-control-next ${Styles.rightArrow} `} href="#carouselExampleControls" data-slide="next"></i>
+      </div>
+    {/* </a> */}
   </div>
 )
 
