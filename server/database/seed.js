@@ -6,7 +6,7 @@ const productId = 100;
 
 let imagesOfOneProduct = [];
 
-let generatingImages = (i) => {
+const generatingImages = (i) => {
   let allImages = [];
   for (let x = 1; x <= 5; x++) {
     var randomimage = `https://picsum.photos/id/${i}${x}/900/900`;
@@ -28,3 +28,5 @@ let insertProductImages = () => {
 };
 
 insertProductImages();
+
+module.exports = generatingImages;
