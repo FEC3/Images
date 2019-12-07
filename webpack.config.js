@@ -1,5 +1,5 @@
 var path = require('path');
-var CLNT_DIR = path.join(__dirname, '/client/components/index.jsx');
+var CLNT_DIR = path.join(__dirname, '/client/index.js');
 var PUB_DIR = path.join(__dirname, '/public');
 
 module.exports = {
@@ -11,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?/,
+        test: /\.js?/,
         loader: 'babel-loader',
         query: {
           presets: ['@babel/preset-react', '@babel/preset-env']
