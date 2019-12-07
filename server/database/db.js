@@ -5,7 +5,6 @@ mongoose.connect('mongodb://127.0.0.1/images', { useNewUrlParser: true, useUnifi
 
 const db = mongoose.connection;
 
-// Error & Success Handling
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
   console.log('Our database is connected!');
