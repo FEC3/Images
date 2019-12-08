@@ -10,10 +10,10 @@ const InsideImage = Styled.div`
   }
 `;
 
-const ImageInSlide = (props) => (
+const ImagesInSlide = (props) => (
   <InsideImage className="carousel-item">
-    <img className="d-block w-100" src={props.imageUrl.url} onClick={() => props.onBigImageClick()} alt="" />
+    <img className="d-block w-100" src={props.imageUrl.url}  alt="" />
   </InsideImage>
-)
+);
 
-export default ImageInSlide;
+export default ImagesInSlide;

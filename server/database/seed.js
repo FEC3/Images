@@ -26,3 +26,5 @@ let insertProductImages = () => {
 };
 
 insertProductImages();
+
+module.exports = generatingImages;
