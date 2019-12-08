@@ -16,14 +16,14 @@ const ZoomedImgaes = Styled.div`
     position: fixed;
     color:white
   }
-`
+`;
 
 
 const ImagesList = (props) => (
   <ZoomedImgaes>
     <i className="fa fa-times-circle" onClick={()=> props.handleExit()}></i>
-      {props.images.map((image, index) => <img className="d-block w-100" src={image.url} />)}
+      {props.images.map((image, index) => <img className="d-block w-100" src={image.url} key={index}/>)}
 
   </ZoomedImgaes>
-)
+);
 export default ImagesList;

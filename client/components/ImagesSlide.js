@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ImageInSlide from './ImageInSlide.js';
+import ImagesInSlide from './ImagesInSlide.js';
 import Styled from 'styled-components';
 
 const Slide = Styled.div`
@@ -34,6 +34,7 @@ const LeftArrow = Styled.div`
     cursor:pointer
   }
 `;
+
 const RightArrow = Styled.div`
   position: absolute;
   top: 50%;
@@ -50,20 +51,20 @@ const RightArrow = Styled.div`
 const ImagesSlide = (props) => (
   <Slide>
     <div id="carouselExampleControls" className="carousel slide SlideSize" data-ride="carousel" data-interval="false">
-      <div className= "carousel-inner" onClick={() => props.onBigImageClick()}>
+      <div className="carousel-inner" onClick={() => props.ClickToZoom()}>
         <div className="carousel-item active ImageSize" >
-          <img className="d-block w-100"  src={props.images[0].url} alt="First slide" />
+          <img className="d-block w-100" src={props.images[0].url} alt="First slide" />
         </div>
-        {props.images.slice(1).map((imageUrl, index) => <ImageInSlide imageUrl={imageUrl} key={index} />)}
+        {props.images.slice(1).map((imageUrl, index) => <ImagesInSlide imageUrl={imageUrl} key={index} />)}
       </div>
     </div>
     <LeftArrow >
       <i className="fas fa-arrow-left carousel-control-prev" href="#carouselExampleControls" data-slide="prev">  </i>
-      </LeftArrow>
+    </LeftArrow>
     <RightArrow >
       <i className="fas fa-arrow-right carousel-control-next" href="#carouselExampleControls" data-slide="next"></i>
-      </RightArrow>
+    </RightArrow>
   </Slide>
-)
+);
 
 export default ImagesSlide;
