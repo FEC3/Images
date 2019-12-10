@@ -9,10 +9,10 @@ import Bullets from '../client/components/Bullets';
 
 
 describe('<App/>', () => {
-  test('It should render 1 div component that contains two components when images are provided', () => {
+  test('It should render 1 div component ', () => {
     const component = shallow(<App />);
     expect(component).toHaveLength(1);
-    expect(component.find('div')).toHaveLength(2);
+    expect(component.find('div')).toHaveLength(1);
     expect(component.find('ImagesSlide')).toHaveLength(1);
     expect(component.find('Bullets')).toHaveLength(1);
   });
