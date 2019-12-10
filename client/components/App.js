@@ -35,7 +35,7 @@ class App extends Component {
 
   grabImages() {
     let params = new URLSearchParams(document.location.search.substring(1));
-    let productId = params.get('productId')
+    let productId = params.get('pid')
     axios.get(`http://localhost:3002/images/${productId}`)
       .then((res) => {
         const images = res.data;
