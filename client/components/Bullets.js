@@ -2,18 +2,17 @@ import React from 'react';
 import Styled from 'styled-components'
 
 const ImagesWrapper = Styled.ul`
-position: absolute;
-top: 200px;
-margin-left: 10px;
+position: relative;
+margin-right: 40px;
 `;
 
 const Image =  Styled.div`
-padding: 4px;
 img {
   width:  60px;
   height: 60px;
   cursor: pointer;
-
+  margin: 4px;
+  padding: 1px;
 }
 .Border {
    border: solid 2px black;

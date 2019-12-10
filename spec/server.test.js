@@ -1,6 +1,8 @@
 const generatingImages = require('../server/database/seed');
 const Image = require('../server/database/db');
 const retrieve = require('../server/database/db');
+const regeneratorRuntime = require ("regenerator-runtime");
+
 
 describe("seed generatingImagesfunction", () => {
   test("creating array of images objects", () => {

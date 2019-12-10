@@ -3,14 +3,26 @@ import ReactDOM from 'react-dom';
 import ImagesSlide from './ImagesSlide.js';
 import ImagesList from './ImagesList.js';
 import Bullets from './Bullets.js';
+import Styled from 'styled-components';
 import axios from 'axios';
+
+const ImageServiceStyle = Styled.div`
+  max-width: 750px;
+  max-height: 550px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  // align-items: flex-start;
+
+`;
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       view: 'main',
-      images: null
+      images: [{"url":"https://picsum.photos/id/31/900/900","selected":false},{"url":"https://picsum.photos/id/32/900/900","selected":false},{"url":"https://picsum.photos/id/33/900/900","selected":false},{"url":"https://picsum.photos/id/34/900/900","selected":false},{"url":"https://picsum.photos/id/35/900/900","selected":false}]
+
     };
     this.clickToSelect = this.clickToSelect.bind(this);
     this.ClickToZoom = this.ClickToZoom.bind(this);
@@ -70,10 +82,11 @@ class App extends Component {
 
       <div>
         {view === 'main' ?
-          (<div>
-            <ImagesSlide images={this.state.images} ClickToZoom={this.ClickToZoom} />
-            <Bullets images={this.state.images} clickToSelect={this.clickToSelect} />
-          </div>)
+          (
+            <ImageServiceStyle>
+              <Bullets images={this.state.images} clickToSelect={this.clickToSelect} />
+              <ImagesSlide images={this.state.images} ClickToZoom={this.ClickToZoom} />
+            </ImageServiceStyle>)
           : (<ImagesList images={this.state.images} handleExit={this.handleExit} />)}
 
       </div>

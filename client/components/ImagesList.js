@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Styled from 'styled-components';
 
 const ZoomedImgaes = Styled.div`
-  top: 100%;
   margin-left: auto;
   margin-right: auto;
   width: 95%;
@@ -13,8 +12,14 @@ const ZoomedImgaes = Styled.div`
     right: 45px;
     font-size:36px;
     cursor: pointer;
-    position: fixed;
-    color:white
+    color: hsla(0,0%,100%,.5);
+
+  }
+  i:hover {
+    color: hsla(0,0%,100%,2);
+  }
+  img{
+    margin-bottom: 80px;
   }
 `;
 
