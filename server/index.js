@@ -17,6 +17,8 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(morgan('combined'));
 
 app.get('/images/:productId', (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   let productId = req.params.productId;
   Image.retrieve(productId).then(data => res.send(data[0].images));
 });
