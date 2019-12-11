@@ -7,12 +7,11 @@ import Styled from 'styled-components';
 import axios from 'axios';
 
 const ImageServiceStyle = Styled.div`
-  max-width: 750px;
-  max-height: 550px;
+  max-width: 700px;
+  max-height: 500px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  // align-items: flex-start;
 
 `;
 
@@ -21,7 +20,7 @@ class App extends Component {
     super(props);
     this.state = {
       view: 'main',
-      images: null
+      images: [ { "url" : "", "selected" : false }, { "url" : "", "selected" : false }, { "url" : "", "selected" : false }, { "url" : "", "selected" : false }, { "url" : "", "selected" : false } ]
     };
 
     this.clickToSelect = this.clickToSelect.bind(this);
@@ -29,8 +28,8 @@ class App extends Component {
     this.handleExit = this.handleExit.bind(this);
   };
 
-  componentDidMount() {
-    this.grabImages()
+  async componentDidMount() {
+    await this.grabImages()
   };
 
   grabImages() {
@@ -43,6 +42,7 @@ class App extends Component {
         images[0].selected = true;
         this.setState({
           images,
+          view: 'main'
         });
       })
       .catch(err => console.log(err))
@@ -77,8 +77,8 @@ class App extends Component {
 
   render() {
     let view = this.state.view;
-    if (!this.state.images) {
-      return <div></div>;
+    if (view ==="") {
+      return <ImageServiceStyle></ImageServiceStyle>;
     };
     return (
 

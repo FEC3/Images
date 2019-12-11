@@ -7,8 +7,8 @@ const Slide = Styled.div`
   align-items: center;
   margin-left: 50px;
   .SlideSize {
-    height: 550px;
-    width: 550px;
+    height: 500px;
+    width: 500px;
     cursor: zoom-in;
   }
 `;
@@ -27,7 +27,7 @@ const LeftArrow = Styled.div`
 const RightArrow = Styled.div`
   position: absolute;
   top: 50%;
-  left: 575px;
+  left: 525px;
   i{
     color: black;
     font-size: 20px;
