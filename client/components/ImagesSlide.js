@@ -35,14 +35,17 @@ const RightArrow = Styled.div`
   }
 `;
 
+
 const ImagesSlide = (props) => (
+
   <Slide>
     <div id="carouselExampleControls" className="carousel slide SlideSize" data-ride="carousel" data-interval="false">
-      <div className="carousel-inner" onClick={() => props.ClickToZoom()}>
+      <div className="carousel-inner" onClick={() => props.ClickToZoom()} >
+        {console.log(props.firstImg)}
         <div className="carousel-item active" >
           <img className="d-block w-100" src={props.images[0].url} />
         </div>
-        {props.images.slice(1).map((imageUrl, index) => <ImagesInSlide imageUrl={imageUrl} key={index} />)}
+        {props.images.slice(1).map((imageUrl, index) => <ImagesInSlide imageUrl={imageUrl} key={index} id={index + 1} />)}
       </div>
     </div>
     <LeftArrow >
@@ -53,5 +56,6 @@ const ImagesSlide = (props) => (
     </RightArrow>
   </Slide>
 );
+
 
 export default ImagesSlide;
