@@ -23,7 +23,6 @@ const ZoomedImgaes = Styled.div`
   }
 `;
 
-
 const ImagesList = (props) => (
   <ZoomedImgaes>
     <i className="fa fa-times-circle" onClick={() => props.handleExit()} ></i>

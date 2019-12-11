@@ -36,39 +36,26 @@ const RightArrow = Styled.div`
 `;
 
 
-const ImagesSlide = (props) => {
+const ImagesSlide = (props) => (
 
-  // const getId = () => {
-  //   let images = props.images;
-  //   for (let i = 0; i < images.length; i++) {
-  //     if (images[i].selected) {
-  //         return i;
-  //     }
-  //   }
-  // }
-
-  return (
-
-    <Slide>
-      <div id="carouselExampleControls" className="carousel slide SlideSize" data-ride="carousel" data-interval="false">
-        <div className="carousel-inner" onClick={() => props.ClickToZoom()} >
-          {console.log(props.firstImg)}
-          <div className="carousel-item active" >
-            <img className="d-block w-100" src={props.images[0].url} />
-          </div>
-          {props.images.slice(1).map((imageUrl, index) => <ImagesInSlide imageUrl={imageUrl} key={index} id={index + 1} />)}
-
+  <Slide>
+    <div id="carouselExampleControls" className="carousel slide SlideSize" data-ride="carousel" data-interval="false">
+      <div className="carousel-inner" onClick={() => props.ClickToZoom()} >
+        {console.log(props.firstImg)}
+        <div className="carousel-item active" >
+          <img className="d-block w-100" src={props.images[0].url} />
         </div>
+        {props.images.slice(1).map((imageUrl, index) => <ImagesInSlide imageUrl={imageUrl} key={index} id={index + 1} />)}
       </div>
-      <LeftArrow >
-        <i className="fas fa-arrow-left carousel-control-prev" href="#carouselExampleControls" data-slide="prev">  </i>
-      </LeftArrow>
-      <RightArrow >
-        <i className="fas fa-arrow-right carousel-control-next" href="#carouselExampleControls" data-slide="next"></i>
-      </RightArrow>
-    </Slide>
-  );
-}
+    </div>
+    <LeftArrow >
+      <i className="fas fa-arrow-left carousel-control-prev" href="#carouselExampleControls" data-slide="prev">  </i>
+    </LeftArrow>
+    <RightArrow >
+      <i className="fas fa-arrow-right carousel-control-next" href="#carouselExampleControls" data-slide="next"></i>
+    </RightArrow>
+  </Slide>
+);
 
 
 export default ImagesSlide;
