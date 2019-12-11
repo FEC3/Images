@@ -26,8 +26,8 @@ const ZoomedImgaes = Styled.div`
 
 const ImagesList = (props) => (
   <ZoomedImgaes>
-    <i className="fa fa-times-circle" onClick={()=> props.handleExit()}></i>
-      {props.images.map((image, index) => <img className="d-block w-100" src={image.url} key={index}/>)}
+    <i className="fa fa-times-circle" onClick={() => props.handleExit()} ></i>
+    {props.images.map((image, index) => <img id={index} className="d-block w-100" src={image.url} key={index} />)}
 
   </ZoomedImgaes>
 );

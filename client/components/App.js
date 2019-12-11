@@ -22,8 +22,8 @@ class App extends Component {
     this.state = {
       view: 'main',
       images: null
-
     };
+
     this.clickToSelect = this.clickToSelect.bind(this);
     this.ClickToZoom = this.ClickToZoom.bind(this);
     this.handleExit = this.handleExit.bind(this);
@@ -35,8 +35,9 @@ class App extends Component {
 
   grabImages() {
     let params = new URLSearchParams(document.location.search.substring(1));
-    let productId = params.get('pid')
-    axios.get(`http://localhost:3002/images/${productId}`)
+    let pid = params.get('pid')
+
+    axios.get(`http://localhost:3002/images/${pid}`)
       .then((res) => {
         const images = res.data;
         images[0].selected = true;
@@ -60,6 +61,7 @@ class App extends Component {
       images,
     });
   };
+
   ClickToZoom() {
     this.setState({
       view: 'zoom'
@@ -68,7 +70,7 @@ class App extends Component {
 
   handleExit() {
     this.setState({
-      view: 'main'
+      view: 'main',
     });
   };
 
