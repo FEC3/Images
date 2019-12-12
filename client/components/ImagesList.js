@@ -3,9 +3,12 @@ import React, { Component } from 'react';
 import Styled from 'styled-components';
 
 const ZoomedImgaes = Styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  width: 95%;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: -50%;
   i{
     position: fixed;
     top: 10px;
