@@ -12,7 +12,7 @@ const ZoomedImgaes = Styled.div`
   i{
     position: fixed;
     top: 10px;
-    right: 35px;
+    right: 45px;
     font-size:36px;
     cursor: pointer;
     color: hsla(0,0%,100%,.5);
