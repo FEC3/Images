@@ -5,7 +5,7 @@ import Styled from 'styled-components';
 const ZoomedImgaes = Styled.div`
   position: absolute;
   z-index: 100;
-  width: 100%;
+  width: 95%;
   top: 0;
   left: 50%;
   margin-left: -50%;
