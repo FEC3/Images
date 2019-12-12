@@ -36,7 +36,7 @@ class App extends Component {
     let params = new URLSearchParams(document.location.search.substring(1));
     let pid = params.get('pid')
 
-    axios.get(`http://127.0.0.1:3002/images/${pid}`)
+    axios.get(`/images/${pid}`)
       .then((res) => {
         const images = res.data;
         images[0].selected = true;
