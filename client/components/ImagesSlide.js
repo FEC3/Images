@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ImagesInSlide from './ImagesInSlide.js';
-// import Styled from 'styled-components';
+import Styled from 'styled-components';
 
-const Slide = window.styled.div`
+const Slide = Styled.div`
   position: relative;
   align-items: center;
   margin-left: 50px;
@@ -13,7 +13,7 @@ const Slide = window.styled.div`
   }
 `;
 
-const LeftArrow = window.styled.div`
+const LeftArrow = Styled.div`
   position: absolute;
   top: 50%;
   left: -45px;
@@ -24,7 +24,7 @@ const LeftArrow = window.styled.div`
   }
 `;
 
-const RightArrow = window.styled.div`
+const RightArrow = Styled.div`
   position: absolute;
   top: 50%;
   left: 525px;

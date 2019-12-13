@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
-// import Styled from 'styled-components';
+import Styled from 'styled-components';
 
 
-const InsideImage = window.styled.div`
+const InsideImage = Styled.div`
   a {
     cursor: zoom-in;
   }

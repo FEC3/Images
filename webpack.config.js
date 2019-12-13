@@ -8,40 +8,45 @@ module.exports = {
     filename: 'app.js',
     path: PUB_DIR
   },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['@babel/preset-react', '@babel/preset-env']
-        }
-      },
-      {
-        test: /\.css$/i,
-        exclude: /\.module\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.module\.css$/i,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-        loader: 'url-loader',
-        options: {
-          limit: 8192,
-        },
-      }
-    ]
+  resolve: {
+    alias: {
+   "styled-components": path.resolve(__dirname, "node_modules", "styled-components"),
   }
+  },
+  module: {
+   rules: [
+     {
+        test: /\.(js|jsx)$/,
+      loader: 'babel-loader',
+      query: {
+        presets: ['@babel/preset-react', '@babel/preset-env']
+      }
+
+
+      test: /\.css$/i,
+      exclude: /\.module\.css$/i,
+      use: ['style-loader', 'css-loader'],
+
+
+      test: /\.module\.css$/i,
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            modules: true,
+          },
+
+
+
+
+      test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+      loader: 'url-loader',
+      options: {
+        limit: 8192,
+      },
+
+
+
 
 };

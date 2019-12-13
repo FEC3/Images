@@ -1,7 +1,7 @@
 import React from 'react';
-// import Styled from 'styled-components'
+import Styled from 'styled-components'
 
-const ImagesWrapper = window.styled.ul`
+const ImagesWrapper = Styled.ul`
 position: relative;
 margin-right: 30px;
 .Border {
@@ -9,7 +9,7 @@ margin-right: 30px;
  }
 `;
 
-const Image = window.styled.img`
+const Image = Styled.img`
 
   width:  65x;
   height: 65px;
