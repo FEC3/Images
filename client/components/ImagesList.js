@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-// import Styled from 'styled-components';
+import Styled from 'styled-components';
 
 const ZoomedImgaes = Styled.div`
   position: absolute;

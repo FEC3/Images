@@ -1,90 +1,4 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./client/index.js");
-/******/ })
-/************************************************************************/
-/******/ ({
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
 /***/ "./client/components/App.js":
 /*!**********************************!*\
@@ -130,7 +44,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bab
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteral */ \"./node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js\");\n/* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n\n\nfunction _templateObject() {\n  var data = _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0___default()([\"\\n  position: absolute;\\n  z-index: 100;\\n  width: 100%;\\n  top: 0;\\n  left: 50%;\\n  margin-left: -50%;\\n  i{\\n    position: fixed;\\n    top: 10px;\\n    right: 35px;\\n    font-size:36px;\\n    cursor: pointer;\\n    color: hsla(0,0%,100%,.5);\\n\\n  }\\n  i:hover {\\n    color: hsla(0,0%,100%,2);\\n  }\\n  img{\\n    margin-bottom: 80px;\\n  }\\n\"]);\n\n  _templateObject = function _templateObject() {\n    return data;\n  };\n\n  return data;\n}\n\n // import Styled from 'styled-components';\n\nvar ZoomedImgaes = Styled.div(_templateObject());\n\nvar ImagesList = function ImagesList(props) {\n  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ZoomedImgaes, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"i\", {\n    className: \"fa fa-times-circle\",\n    onClick: function onClick() {\n      return props.handleExit();\n    }\n  }), props.images.map(function (image, index) {\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"img\", {\n      id: index,\n      className: \"d-block w-100\",\n      src: image.url,\n      key: index\n    });\n  }));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ImagesList);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvY29tcG9uZW50cy9JbWFnZXNMaXN0LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vY2xpZW50L2NvbXBvbmVudHMvSW1hZ2VzTGlzdC5qcz82OTM4Il0sInNvdXJjZXNDb250ZW50IjpbIlxuaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCB9IGZyb20gJ3JlYWN0Jztcbi8vIGltcG9ydCBTdHlsZWQgZnJvbSAnc3R5bGVkLWNvbXBvbmVudHMnO1xuXG5jb25zdCBab29tZWRJbWdhZXMgPSBTdHlsZWQuZGl2YFxuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHotaW5kZXg6IDEwMDtcbiAgd2lkdGg6IDEwMCU7XG4gIHRvcDogMDtcbiAgbGVmdDogNTAlO1xuICBtYXJnaW4tbGVmdDogLTUwJTtcbiAgaXtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiAxMHB4O1xuICAgIHJpZ2h0OiAzNXB4O1xuICAgIGZvbnQtc2l6ZTozNnB4O1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBjb2xvcjogaHNsYSgwLDAlLDEwMCUsLjUpO1xuXG4gIH1cbiAgaTpob3ZlciB7XG4gICAgY29sb3I6IGhzbGEoMCwwJSwxMDAlLDIpO1xuICB9XG4gIGltZ3tcbiAgICBtYXJnaW4tYm90dG9tOiA4MHB4O1xuICB9XG5gO1xuXG5jb25zdCBJbWFnZXNMaXN0ID0gKHByb3BzKSA9PiAoXG4gIDxab29tZWRJbWdhZXM+XG4gICAgPGkgY2xhc3NOYW1lPVwiZmEgZmEtdGltZXMtY2lyY2xlXCIgb25DbGljaz17KCkgPT4gcHJvcHMuaGFuZGxlRXhpdCgpfSA+PC9pPlxuICAgIHtwcm9wcy5pbWFnZXMubWFwKChpbWFnZSwgaW5kZXgpID0+IDxpbWcgaWQ9e2luZGV4fSBjbGFzc05hbWU9XCJkLWJsb2NrIHctMTAwXCIgc3JjPXtpbWFnZS51cmx9IGtleT17aW5kZXh9IC8+KX1cblxuICA8L1pvb21lZEltZ2Flcz5cbik7XG5leHBvcnQgZGVmYXVsdCBJbWFnZXNMaXN0OyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQXVCQTtBQUFBO0FBRUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBSEE7QUFDQTtBQU1BIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./client/components/ImagesList.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteral */ \"./node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js\");\n/* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\n\n\nfunction _templateObject() {\n  var data = _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0___default()([\"\\n  position: absolute;\\n  z-index: 100;\\n  width: 100%;\\n  top: 0;\\n  left: 50%;\\n  margin-left: -50%;\\n  i{\\n    position: fixed;\\n    top: 10px;\\n    right: 35px;\\n    font-size:36px;\\n    cursor: pointer;\\n    color: hsla(0,0%,100%,.5);\\n\\n  }\\n  i:hover {\\n    color: hsla(0,0%,100%,2);\\n  }\\n  img{\\n    margin-bottom: 80px;\\n  }\\n\"]);\n\n  _templateObject = function _templateObject() {\n    return data;\n  };\n\n  return data;\n}\n\n\n\nvar ZoomedImgaes = styled_components__WEBPACK_IMPORTED_MODULE_2__[\"default\"].div(_templateObject());\n\nvar ImagesList = function ImagesList(props) {\n  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ZoomedImgaes, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"i\", {\n    className: \"fa fa-times-circle\",\n    onClick: function onClick() {\n      return props.handleExit();\n    }\n  }), props.images.map(function (image, index) {\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\"img\", {\n      id: index,\n      className: \"d-block w-100\",\n      src: image.url,\n      key: index\n    });\n  }));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ImagesList);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvY29tcG9uZW50cy9JbWFnZXNMaXN0LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vY2xpZW50L2NvbXBvbmVudHMvSW1hZ2VzTGlzdC5qcz82OTM4Il0sInNvdXJjZXNDb250ZW50IjpbIlxuaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCB9IGZyb20gJ3JlYWN0JztcbmltcG9ydCBTdHlsZWQgZnJvbSAnc3R5bGVkLWNvbXBvbmVudHMnO1xuXG5jb25zdCBab29tZWRJbWdhZXMgPSBTdHlsZWQuZGl2YFxuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHotaW5kZXg6IDEwMDtcbiAgd2lkdGg6IDEwMCU7XG4gIHRvcDogMDtcbiAgbGVmdDogNTAlO1xuICBtYXJnaW4tbGVmdDogLTUwJTtcbiAgaXtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiAxMHB4O1xuICAgIHJpZ2h0OiAzNXB4O1xuICAgIGZvbnQtc2l6ZTozNnB4O1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBjb2xvcjogaHNsYSgwLDAlLDEwMCUsLjUpO1xuXG4gIH1cbiAgaTpob3ZlciB7XG4gICAgY29sb3I6IGhzbGEoMCwwJSwxMDAlLDIpO1xuICB9XG4gIGltZ3tcbiAgICBtYXJnaW4tYm90dG9tOiA4MHB4O1xuICB9XG5gO1xuXG5jb25zdCBJbWFnZXNMaXN0ID0gKHByb3BzKSA9PiAoXG4gIDxab29tZWRJbWdhZXM+XG4gICAgPGkgY2xhc3NOYW1lPVwiZmEgZmEtdGltZXMtY2lyY2xlXCIgb25DbGljaz17KCkgPT4gcHJvcHMuaGFuZGxlRXhpdCgpfSA+PC9pPlxuICAgIHtwcm9wcy5pbWFnZXMubWFwKChpbWFnZSwgaW5kZXgpID0+IDxpbWcgaWQ9e2luZGV4fSBjbGFzc05hbWU9XCJkLWJsb2NrIHctMTAwXCIgc3JjPXtpbWFnZS51cmx9IGtleT17aW5kZXh9IC8+KX1cblxuICA8L1pvb21lZEltZ2Flcz5cbik7XG5leHBvcnQgZGVmYXVsdCBJbWFnZXNMaXN0OyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUF1QkE7QUFBQTtBQUVBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUhBO0FBQ0E7QUFNQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./client/components/ImagesList.js\n");
 
 /***/ }),
 
@@ -896,4 +810,4 @@ eval("module.exports = function (module) {\n  if (!module.webpackPolyfill) {\n  
 
 /***/ })
 
-/******/ });
+},[["./client/index.js","vendor"]]]);
