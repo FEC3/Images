@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import ImagesSlide from './ImagesSlide.js';
 import ImagesList from './ImagesList.js';
 import Bullets from './Bullets.js';
-import Styled from 'styled-components';
+// import Styled from 'styled-components';
 import axios from 'axios';
 
-const ImageServiceStyle = Styled.div`
+const ImageServiceStyle = window.styled.div`
   max-width: 700px;
   max-height: 500px;
   display: flex;
