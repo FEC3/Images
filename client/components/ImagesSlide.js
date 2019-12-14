@@ -22,6 +22,9 @@ const LeftArrow = Styled.div`
     font-size: 20px;
     cursor:pointer
   }
+  i:hover{
+    color: black;
+  }
 `;
 
 const RightArrow = Styled.div`
@@ -32,6 +35,9 @@ const RightArrow = Styled.div`
     color: black;
     font-size: 20px;
     cursor:pointer
+  }
+  i:hover{
+    color: black;
   }
 `;
 
