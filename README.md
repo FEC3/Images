@@ -8,7 +8,7 @@
 
 
 ### All Components
-![](demo/Mekea-All-components.gif)
+![](demo/Mekea-All-Components.gif)
 
 
 
